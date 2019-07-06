@@ -55,6 +55,7 @@ function ResourceTable(props) {
     function handleDeleteResource(id) {
         props.onDelete(id);
         setDeleteDialogOpen(!deleteDialogOpen);
+        console.log('Test commit');
     }
     
 
