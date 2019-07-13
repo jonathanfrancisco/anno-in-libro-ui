@@ -15,8 +15,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-
-
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -38,12 +36,12 @@ function ResourceTable(props) {
     const classes = useStyles();
     const {data} = props;
 
-
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(4);
     function handleChangePage(event, newPage) {
         setPage(newPage);
     }
+
     function handleChangeRowsPerPage(event) {
         setRowsPerPage(+event.target.value);
     }
@@ -52,13 +50,12 @@ function ResourceTable(props) {
     function handleDeleteDialogToggle() {
         setDeleteDialogOpen(!deleteDialogOpen);
     }
+
     function handleDeleteResource(id) {
         props.onDelete(id);
         setDeleteDialogOpen(!deleteDialogOpen);
-        console.log('Test commit');
     }
     
-
     return (
         <Table size="medium">
             <TableHead>

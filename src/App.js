@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 function App() {
 
 	const classes = useStyles();
-
+	
 	return (
 		<Router>
 			<div className="App">
@@ -41,7 +41,6 @@ function App() {
 			</div>
 		</Router>
 	);
-
 }
 
 export default App;

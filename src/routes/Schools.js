@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import TableContainer from '../components/TableContainer/TableContainer';
+import SchoolTable from '../components/SchoolTable';
 
 const useStyles = makeStyles(theme => ({
     tableTitle: {
@@ -11,10 +11,8 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-function Schools() {
-
+const Schools = () => {
     const classes = useStyles();
-
     return (
         <div>
             <Paper>
@@ -23,11 +21,9 @@ function Schools() {
                     variant="h5"
                     gutterBottom
                 >
-                        Manage Schools
+                    Manage Schools
                 </Typography>
-                <TableContainer 
-                    apiDataBaseRoute="schools"
-                />
+                <SchoolTable />
             </Paper>
         </div>
     );
